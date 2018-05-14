@@ -31,7 +31,6 @@ def write_aggregations(aggregations):
         print(aggregation)
 
 def aggregate(logs):
-    last_mode_name = ""
     aggregations = []
 
     for line in logs:
@@ -39,10 +38,9 @@ def aggregate(logs):
             mode_name, zoom = parse_line(line)
             logging.info("mode_name : {}, zoom : {}".format(mode_name, zoom))
 
-            if mode_name == last_mode_name:
+            if aggregations and mode_name == aggregations[-1].mode_name:
                 aggregations[-1].add_zoom(zoom)
             else:
-                last_mode_name = mode_name
                 agg_viewmode = Agg_viewmode(mode_name, zoom)
                 aggregations.append(agg_viewmode)
 
