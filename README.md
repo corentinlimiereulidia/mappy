@@ -47,8 +47,7 @@ standard_hd 1
 traffic 2
 standard    2
 public_transport_hd 1
-standard    3
-standard    2
+standard    4
 standard_hd 1
 ````
 
@@ -59,7 +58,7 @@ Une troisième colonne devra donc indiquer la liste des niveaux de zooms. Il doi
 standard    4   19,12,14
 traffic 1   14
 traffic_hd  2 12 
-standard_hd 1   12
+standard_hd 1   14
 traffic 2   14,17
 standard    2   19,17
 public_transport_hd 1   15
